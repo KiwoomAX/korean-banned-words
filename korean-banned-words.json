@@ -368,6 +368,50 @@
       }
     },
     {
+      "id": "geolda",
+      "category": "native-verb",
+      "match": "fragment",
+      "banned": [
+        "에 걸리",
+        "에 걸린",
+        "에 걸립",
+        "에 걸려",
+        "에만 걸리",
+        "에도 걸리",
+        "안 걸리",
+        "못 걸리",
+        "거는 곳",
+        "를 건다",
+        "을 건다",
+        "를 걸고",
+        "을 걸고",
+        "를 걸어",
+        "을 걸어",
+        "를 걸면",
+        "을 걸면",
+        "를 걸었",
+        "을 걸었",
+        "를 걸지",
+        "을 걸지"
+      ],
+      "replace": [
+        "적용",
+        "검출",
+        "해당"
+      ],
+      "scope": [
+        "answer",
+        "artifact",
+        "living-doc"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "user",
+        "date": "2026-09-20",
+        "quote": "검사에 걸지 않습니다. => 검사 대상이 아닙니다 가 맞지 않나?"
+      }
+    },
+    {
       "id": "jari",
       "category": "too-broad",
       "match": "forms",

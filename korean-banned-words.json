@@ -344,6 +344,29 @@
       }
     },
     {
+      "id": "eogeutnada",
+      "category": "native-verb",
+      "match": "fragment",
+      "banned": [
+        "어긋"
+      ],
+      "replace": [
+        "불일치",
+        "상충"
+      ],
+      "scope": [
+        "answer",
+        "artifact",
+        "living-doc"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "user",
+        "date": "2026-09-20",
+        "quote": "어긋나다 라는 표현도 고쳐야 함"
+      }
+    },
+    {
       "id": "jari",
       "category": "too-broad",
       "match": "forms",

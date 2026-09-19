@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "updated": "2026-09-19",
+  "updated": "2026-09-20",
   "scopes": {
     "answer": "사용자에게 보내는 답",
     "artifact": "사용자가 요구한 산출물 문서",
@@ -13,15 +13,15 @@
     },
     {
       "id": "too-broad",
-      "title": "무엇이든 가리킬 수 있는 넓은 말"
+      "title": "대명사처럼 쓰는 말"
     },
     {
       "id": "english-literal",
-      "title": "영어를 그대로 옮긴 것"
+      "title": "영어를 직역한 것"
     },
     {
       "id": "coined",
-      "title": "뜻을 정하지 않고 지어낸 표현"
+      "title": "무엇을 세는지 밝히지 않은 말"
     },
     {
       "id": "ui-text",
@@ -268,6 +268,80 @@
       }
     },
     {
+      "id": "damda",
+      "category": "native-verb",
+      "match": "fragment",
+      "banned": [
+        "담다",
+        "담는",
+        "담고",
+        "담은",
+        "담아",
+        "담긴",
+        "담았",
+        "담습니",
+        "담겨"
+      ],
+      "replace": [
+        "포함",
+        "수록"
+      ],
+      "scope": [
+        "answer",
+        "artifact",
+        "living-doc"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "user",
+        "date": "2026-09-20",
+        "quote": "담다 -> 포함시키다 가 더 자연스럽지 않나?"
+      }
+    },
+    {
+      "id": "mureum",
+      "category": "native-verb",
+      "match": "forms",
+      "banned": [
+        "물음"
+      ],
+      "replace": [
+        "질문"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-19",
+        "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 164건, 만 자당 1.68"
+      }
+    },
+    {
+      "id": "natmal",
+      "category": "native-verb",
+      "match": "forms",
+      "banned": [
+        "낱말"
+      ],
+      "replace": [
+        "단어"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": false,
+      "disabled_reason": "사용자 본인이 쓰는 말이다. 2026-09-19 에 '내가 너에게 고쳐달라고 하는 낱말들 찾아줘봐'라고 직접 썼다.",
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-19",
+        "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 206건, 만 자당 2.11"
+      }
+    },
+    {
       "id": "jari",
       "category": "too-broad",
       "match": "forms",
@@ -329,27 +403,6 @@
         "kind": "measured",
         "date": "2026-09-19",
         "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 73건, 만 자당 0.75"
-      }
-    },
-    {
-      "id": "mureum",
-      "category": "too-broad",
-      "match": "forms",
-      "banned": [
-        "물음"
-      ],
-      "replace": [
-        "질문"
-      ],
-      "scope": [
-        "answer",
-        "artifact"
-      ],
-      "enabled": true,
-      "evidence": {
-        "kind": "measured",
-        "date": "2026-09-19",
-        "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 164건, 만 자당 1.68"
       }
     },
     {
@@ -552,51 +605,8 @@
       }
     },
     {
-      "id": "hoecha",
-      "category": "coined",
-      "match": "forms",
-      "banned": [
-        "회차",
-        "째 판",
-        "이번 판"
-      ],
-      "instruction": "무엇의 몇 번째인지를 그 이름과 함께 적는다",
-      "scope": [
-        "answer",
-        "artifact"
-      ],
-      "enabled": true,
-      "evidence": {
-        "kind": "user",
-        "date": "2026-09-06",
-        "quote": "판 회차 등 너가 너무 표현을 친숙하지 않고 불편한 방식으로 다양하게 활용하고 있어 혼란스럽다. 넷째 판은 뭘 의미하나?"
-      }
-    },
-    {
-      "id": "natmal",
-      "category": "coined",
-      "match": "forms",
-      "banned": [
-        "낱말"
-      ],
-      "replace": [
-        "단어"
-      ],
-      "scope": [
-        "answer",
-        "artifact"
-      ],
-      "enabled": false,
-      "disabled_reason": "사용자 본인이 쓰는 말이다. 2026-09-19 에 '내가 너에게 고쳐달라고 하는 낱말들 찾아줘봐'라고 직접 썼다.",
-      "evidence": {
-        "kind": "measured",
-        "date": "2026-09-19",
-        "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 206건, 만 자당 2.11"
-      }
-    },
-    {
       "id": "beoryeoya-haneun-geot",
-      "category": "coined",
+      "category": "english-literal",
       "match": "forms",
       "banned": [
         "버려야 하는 것",
@@ -615,6 +625,27 @@
         "kind": "measured",
         "date": "2026-09-19",
         "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 3건, 만 자당 0.03"
+      }
+    },
+    {
+      "id": "hoecha",
+      "category": "coined",
+      "match": "forms",
+      "banned": [
+        "회차",
+        "째 판",
+        "이번 판"
+      ],
+      "instruction": "무엇의 몇 번째인지를 그 이름과 함께 적는다",
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "user",
+        "date": "2026-09-06",
+        "quote": "판 회차 등 너가 너무 표현을 친숙하지 않고 불편한 방식으로 다양하게 활용하고 있어 혼란스럽다. 넷째 판은 뭘 의미하나?"
       }
     },
     {

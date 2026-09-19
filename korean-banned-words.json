@@ -470,6 +470,32 @@
       }
     },
     {
+      "id": "deohada",
+      "category": "native-verb",
+      "match": "fragment",
+      "banned": [
+        "더하",
+        "더한",
+        "더해",
+        "더했",
+        "더할"
+      ],
+      "replace": [
+        "추가"
+      ],
+      "scope": [
+        "answer",
+        "artifact",
+        "living-doc"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "user",
+        "date": "2026-09-20",
+        "quote": "@import 에 더한다 <추가한다 겠지?>"
+      }
+    },
+    {
       "id": "jari",
       "category": "too-broad",
       "match": "forms",

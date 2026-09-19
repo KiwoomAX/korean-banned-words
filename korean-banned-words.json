@@ -746,12 +746,14 @@
     {
       "id": "da-dwaetseumnida",
       "category": "ui-text",
-      "match": "forms",
+      "match": "fragment",
       "banned": [
-        "다 됐습니다"
+        "다 됐",
+        "다 되었",
+        "다 됨"
       ],
       "replace": [
-        "완료되었습니다"
+        "완료"
       ],
       "scope": [
         "answer",
@@ -759,7 +761,9 @@
       ],
       "enabled": true,
       "evidence": {
-        "kind": "none"
+        "kind": "user",
+        "date": "2026-09-20",
+        "quote": "다 됐습니다. 다 되었습니다. 둘다 -> 완료 로 교체해야됨"
       }
     },
     {

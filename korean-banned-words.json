@@ -152,51 +152,6 @@
       }
     },
     {
-      "id": "gullida",
-      "category": "native-verb",
-      "match": "forms",
-      "banned": [
-        "굴리다",
-        "굴린다",
-        "굴려"
-      ],
-      "replace": [
-        "실행",
-        "처리"
-      ],
-      "scope": [
-        "answer",
-        "artifact"
-      ],
-      "enabled": false,
-      "evidence": {
-        "kind": "none"
-      },
-      "disabled_reason": "2026-09-19 집계 97만 7천 자에서 나온 1건이 규칙 표를 인용한 문장이라 실제 용례가 0건이다."
-    },
-    {
-      "id": "jaengida",
-      "category": "native-verb",
-      "match": "forms",
-      "banned": [
-        "쟁이다",
-        "쟁여"
-      ],
-      "replace": [
-        "축적",
-        "보관"
-      ],
-      "scope": [
-        "answer",
-        "artifact"
-      ],
-      "enabled": false,
-      "evidence": {
-        "kind": "none"
-      },
-      "disabled_reason": "2026-09-19 집계 97만 7천 자에서 나온 1건이 규칙 표를 인용한 문장이라 실제 용례가 0건이다."
-    },
-    {
       "id": "gareuda",
       "category": "native-verb",
       "match": "fragment",
@@ -221,26 +176,6 @@
         "kind": "measured",
         "date": "2026-09-19",
         "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 262건, 만 자당 2.68"
-      }
-    },
-    {
-      "id": "seonda",
-      "category": "native-verb",
-      "match": "forms",
-      "banned": [
-        "선다"
-      ],
-      "instruction": "순서를 말하면 '뒤에 온다', 성립을 말하면 '성립한다'로 쓴다",
-      "scope": [
-        "answer",
-        "artifact"
-      ],
-      "enabled": false,
-      "disabled_reason": "단어 하나로는 잡히지 않는다. 2026-09-19 집계에서 17건 가운데 대부분이 이 규칙 자체를 인용한 것이고, 실제 오용은 '줄을 선다'처럼 구 단위여서 단어 목록으로 못 잡는다.",
-      "evidence": {
-        "kind": "user",
-        "date": "2026-08-30",
-        "quote": "선다 -> 이것또한 적절히"
       }
     },
     {
@@ -319,28 +254,6 @@
         "kind": "measured",
         "date": "2026-09-19",
         "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 164건, 만 자당 1.68"
-      }
-    },
-    {
-      "id": "natmal",
-      "category": "native-verb",
-      "match": "forms",
-      "banned": [
-        "낱말"
-      ],
-      "replace": [
-        "단어"
-      ],
-      "scope": [
-        "answer",
-        "artifact"
-      ],
-      "enabled": false,
-      "disabled_reason": "사용자 본인이 쓰는 말이다. 2026-09-19 에 '내가 너에게 고쳐달라고 하는 낱말들 찾아줘봐'라고 직접 썼다.",
-      "evidence": {
-        "kind": "measured",
-        "date": "2026-09-19",
-        "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 206건, 만 자당 2.11"
       }
     },
     {
@@ -715,30 +628,6 @@
       }
     },
     {
-      "id": "pumi-deulda",
-      "category": "english-literal",
-      "match": "forms",
-      "banned": [
-        "품이 들다",
-        "품이 든"
-      ],
-      "replace": [
-        "수고",
-        "노력"
-      ],
-      "scope": [
-        "answer",
-        "artifact"
-      ],
-      "enabled": false,
-      "evidence": {
-        "kind": "measured",
-        "date": "2026-09-19",
-        "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 1건, 만 자당 0.01"
-      },
-      "disabled_reason": "2026-09-19 집계 97만 7천 자에서 나온 1건이 규칙 표를 인용한 문장이라 실제 용례가 0건이다."
-    },
-    {
       "id": "gakdo",
       "category": "english-literal",
       "match": "forms",
@@ -857,46 +746,6 @@
         "date": "2026-09-20",
         "quote": "다 됐습니다. 다 되었습니다. 둘다 -> 완료 로 교체해야됨"
       }
-    },
-    {
-      "id": "badagagi",
-      "category": "ui-text",
-      "match": "forms",
-      "banned": [
-        "받아 가기"
-      ],
-      "replace": [
-        "다운로드"
-      ],
-      "scope": [
-        "answer",
-        "artifact"
-      ],
-      "enabled": false,
-      "evidence": {
-        "kind": "none"
-      },
-      "disabled_reason": "2026-09-19 집계 97만 7천 자에서 0건이다."
-    },
-    {
-      "id": "saero-mandeulgi",
-      "category": "ui-text",
-      "match": "forms",
-      "banned": [
-        "새로 만들기"
-      ],
-      "replace": [
-        "재생성"
-      ],
-      "scope": [
-        "answer",
-        "artifact"
-      ],
-      "enabled": false,
-      "evidence": {
-        "kind": "none"
-      },
-      "disabled_reason": "2026-09-19 집계 97만 7천 자에서 나온 1건이 '저장소를 새로 만들기로' 라는 정상 용법이다. 막으려는 것은 프로그램 화면의 재생성 인데 문자열로는 둘을 구분할 수 없다."
     }
   ],
   "rules": [

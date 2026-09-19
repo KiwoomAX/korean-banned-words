@@ -1,0 +1,7 @@
+# 같은 커밋이 PC 마다 다른 바이트로 놓이면 내용을 비교하는 검사가 흔들린다.
+# 소비자 쪽 검사가 리눅스 CI 에서 도므로 LF 로 고정한다.
+* text=auto eol=lf
+*.json text eol=lf
+*.py    text eol=lf
+*.md    text eol=lf
+*.yml   text eol=lf

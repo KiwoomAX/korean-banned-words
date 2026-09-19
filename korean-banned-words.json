@@ -26,6 +26,10 @@
     {
       "id": "ui-text",
       "title": "안내 문구"
+    },
+    {
+      "id": "insider",
+      "title": "평소에 쓰지 않는 말"
     }
   ],
   "entries": [
@@ -745,6 +749,53 @@
         "kind": "user",
         "date": "2026-09-20",
         "quote": "다 됐습니다. 다 되었습니다. 둘다 -> 완료 로 교체해야됨"
+      }
+    },
+    {
+      "id": "jeongbon",
+      "category": "insider",
+      "match": "fragment",
+      "banned": [
+        "정본"
+      ],
+      "replace": [
+        "원본"
+      ],
+      "scope": [
+        "answer",
+        "artifact",
+        "living-doc"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "user",
+        "date": "2026-09-20",
+        "quote": "정본이라는 표현도 불편해. 나도 몇년만에 너가 써서 보게 된거야."
+      },
+      "instruction": "가리키는 파일의 이름을 그대로 쓸 수 있으면 그렇게 쓴다"
+    },
+    {
+      "id": "baeseon",
+      "category": "insider",
+      "match": "fragment",
+      "banned": [
+        "배선"
+      ],
+      "replace": [
+        "연결",
+        "배치",
+        "구성"
+      ],
+      "scope": [
+        "answer",
+        "artifact",
+        "living-doc"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "user",
+        "date": "2026-09-20",
+        "quote": "배선이라는 표현도 원래는 안써"
       }
     }
   ],

@@ -168,10 +168,11 @@
         "answer",
         "artifact"
       ],
-      "enabled": true,
+      "enabled": false,
       "evidence": {
         "kind": "none"
-      }
+      },
+      "disabled_reason": "2026-09-19 집계 97만 7천 자에서 나온 1건이 규칙 표를 인용한 문장이라 실제 용례가 0건이다."
     },
     {
       "id": "jaengida",
@@ -189,10 +190,11 @@
         "answer",
         "artifact"
       ],
-      "enabled": true,
+      "enabled": false,
       "evidence": {
         "kind": "none"
-      }
+      },
+      "disabled_reason": "2026-09-19 집계 97만 7천 자에서 나온 1건이 규칙 표를 인용한 문장이라 실제 용례가 0건이다."
     },
     {
       "id": "gareuda",
@@ -576,12 +578,13 @@
         "answer",
         "artifact"
       ],
-      "enabled": true,
+      "enabled": false,
       "evidence": {
         "kind": "measured",
         "date": "2026-09-19",
         "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 1건, 만 자당 0.01"
-      }
+      },
+      "disabled_reason": "2026-09-19 집계 97만 7천 자에서 나온 1건이 규칙 표를 인용한 문장이라 실제 용례가 0건이다."
     },
     {
       "id": "gakdo",
@@ -681,10 +684,11 @@
         "answer",
         "artifact"
       ],
-      "enabled": true,
+      "enabled": false,
       "evidence": {
         "kind": "none"
-      }
+      },
+      "disabled_reason": "2026-09-19 집계 97만 7천 자에서 0건이다."
     },
     {
       "id": "saero-mandeulgi",
@@ -700,10 +704,11 @@
         "answer",
         "artifact"
       ],
-      "enabled": true,
+      "enabled": false,
       "evidence": {
         "kind": "none"
-      }
+      },
+      "disabled_reason": "2026-09-19 집계 97만 7천 자에서 나온 1건이 '저장소를 새로 만들기로' 라는 정상 용법이다. 막으려는 것은 프로그램 화면의 재생성 인데 문자열로는 둘을 구분할 수 없다."
     }
   ],
   "rules": [

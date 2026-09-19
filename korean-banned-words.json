@@ -392,7 +392,9 @@
         "를 걸었",
         "을 걸었",
         "를 걸지",
-        "을 걸지"
+        "을 걸지",
+        "를 걸다",
+        "을 걸다"
       ],
       "replace": [
         "적용",
@@ -409,6 +411,28 @@
         "kind": "user",
         "date": "2026-09-20",
         "quote": "검사에 걸지 않습니다. => 검사 대상이 아닙니다 가 맞지 않나?"
+      }
+    },
+    {
+      "id": "gidae-reul-geolda",
+      "category": "native-verb",
+      "match": "fragment",
+      "banned": [
+        "기대를 걸"
+      ],
+      "replace": [
+        "기대"
+      ],
+      "scope": [
+        "answer",
+        "artifact",
+        "living-doc"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "user",
+        "date": "2026-09-20",
+        "quote": "기대를 걸다 라는 표현도 괴상해"
       }
     },
     {

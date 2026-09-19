@@ -61,11 +61,9 @@
     {
       "id": "jipda",
       "category": "native-verb",
-      "match": "forms",
+      "match": "fragment",
       "banned": [
-        "짚다",
-        "짚는다",
-        "짚어"
+        "짚"
       ],
       "replace": [
         "지적",
@@ -78,17 +76,16 @@
       "enabled": true,
       "evidence": {
         "kind": "measured",
-        "date": "2026-08-30",
-        "quote": "살아 있는 문서 53개 전수 측정에서 짚다 20건, 전부 실제 용례"
+        "date": "2026-09-19",
+        "quote": "2026-09-19 세션 기록 41개의 Claude 발화 75만 6천 자 집계 (코드블록과 백틱 안 제외)에서 158건, 만 자당 2.1"
       }
     },
     {
       "id": "hultda",
       "category": "native-verb",
-      "match": "forms",
+      "match": "fragment",
       "banned": [
-        "훑다",
-        "훑어"
+        "훑"
       ],
       "replace": [
         "검토",
@@ -101,17 +98,18 @@
       "enabled": true,
       "evidence": {
         "kind": "measured",
-        "date": "2026-09-06",
-        "quote": "2026-09-06 최근 30세션 Claude 발화 52만 9천 자 집계에서 23건"
+        "date": "2026-09-19",
+        "quote": "2026-09-19 세션 기록 41개의 Claude 발화 75만 6천 자 집계 (코드블록과 백틱 안 제외)에서 63건, 만 자당 0.8"
       }
     },
     {
       "id": "matdaeda",
       "category": "native-verb",
-      "match": "forms",
+      "match": "fragment",
       "banned": [
-        "맞대다",
-        "맞댄"
+        "맞대",
+        "맞댄",
+        "맞댔"
       ],
       "replace": [
         "대조",
@@ -217,6 +215,52 @@
         "kind": "measured",
         "date": "2026-08-30",
         "quote": "살아 있는 문서 53개 전수 측정에서 갈라·가른다 27건, 전부 실제 용례"
+      }
+    },
+    {
+      "id": "seonda",
+      "category": "native-verb",
+      "match": "forms",
+      "banned": [
+        "선다"
+      ],
+      "instruction": "순서를 말하면 '뒤에 온다', 성립을 말하면 '성립한다'로 쓴다",
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": false,
+      "disabled_reason": "단어 하나로는 잡히지 않는다. 2026-09-19 집계에서 17건 가운데 대부분이 이 규칙 자체를 인용한 것이고, 실제 오용은 '줄을 선다'처럼 구 단위여서 단어 목록으로 못 잡는다.",
+      "evidence": {
+        "kind": "user",
+        "date": "2026-08-30",
+        "quote": "선다 -> 이것또한 적절히"
+      }
+    },
+    {
+      "id": "seunda",
+      "category": "native-verb",
+      "match": "fragment",
+      "banned": [
+        "세우",
+        "세운",
+        "세워",
+        "세웠"
+      ],
+      "replace": [
+        "설정",
+        "지정",
+        "수립"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-19",
+        "quote": "2026-09-19 세션 기록 41개의 Claude 발화 75만 6천 자 집계 (코드블록과 백틱 안 제외)에서 90건, 만 자당 1.2"
       }
     },
     {

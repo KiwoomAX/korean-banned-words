@@ -32,13 +32,13 @@
     {
       "id": "jaeda",
       "category": "native-verb",
-      "match": "forms",
+      "match": "fragment",
       "banned": [
         "재다",
-        "잰다",
-        "재는",
-        "재지",
-        "재어지다"
+        "재어",
+        "잰",
+        "쟀",
+        "잴"
       ],
       "replace": [
         "측정",
@@ -129,11 +129,12 @@
     {
       "id": "ttuiuda",
       "category": "native-verb",
-      "match": "forms",
+      "match": "fragment",
       "banned": [
-        "띄우다",
-        "띄운다",
-        "띄워"
+        "띄우",
+        "띄운",
+        "띄워",
+        "띄웠"
       ],
       "replace": [
         "실행",
@@ -146,8 +147,8 @@
       "enabled": true,
       "evidence": {
         "kind": "measured",
-        "date": "2026-08-30",
-        "quote": "살아 있는 문서 53개 전수 측정에서 띄운다·뜬다 27건, 전부 실제 용례"
+        "date": "2026-09-19",
+        "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 410건, 만 자당 4.2"
       }
     },
     {
@@ -196,11 +197,14 @@
     {
       "id": "gareuda",
       "category": "native-verb",
-      "match": "forms",
+      "match": "fragment",
       "banned": [
         "가르다",
-        "가른다",
-        "갈라"
+        "가른",
+        "갈라",
+        "갈랐",
+        "갈린",
+        "갈렸"
       ],
       "replace": [
         "구분",
@@ -213,8 +217,8 @@
       "enabled": true,
       "evidence": {
         "kind": "measured",
-        "date": "2026-08-30",
-        "quote": "살아 있는 문서 53개 전수 측정에서 갈라·가른다 27건, 전부 실제 용례"
+        "date": "2026-09-19",
+        "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 340건, 만 자당 3.5"
       }
     },
     {
@@ -343,7 +347,9 @@
       ],
       "enabled": true,
       "evidence": {
-        "kind": "none"
+        "kind": "measured",
+        "date": "2026-09-19",
+        "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 164건, 만 자당 1.7"
       }
     },
     {
@@ -450,16 +456,17 @@
       ],
       "enabled": true,
       "evidence": {
-        "kind": "none"
+        "kind": "measured",
+        "date": "2026-09-19",
+        "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 33건, 만 자당 0.3"
       }
     },
     {
       "id": "bulgeojida",
       "category": "english-literal",
-      "match": "forms",
+      "match": "fragment",
       "banned": [
-        "붉어지다",
-        "붉어진"
+        "붉어"
       ],
       "replace": [
         "실패"
@@ -473,16 +480,17 @@
       "evidence": {
         "kind": "measured",
         "date": "2026-09-19",
-        "quote": "2026-09-19 세션 기록 41개의 Claude 발화 75만 6천 자 집계 (코드블록과 백틱 안 제외)에서 23건, 만 자당 0.3"
+        "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 26건, 만 자당 0.3"
       }
     },
     {
       "id": "heotdolda",
       "category": "english-literal",
-      "match": "forms",
+      "match": "fragment",
       "banned": [
-        "헛돌다",
-        "헛돈다"
+        "헛돌",
+        "헛돈",
+        "헛도는"
       ],
       "replace": [
         "무의미"
@@ -496,7 +504,7 @@
       "evidence": {
         "kind": "measured",
         "date": "2026-09-19",
-        "quote": "2026-09-19 세션 기록 41개의 Claude 발화 75만 6천 자 집계 (코드블록과 백틱 안 제외)에서 7건, 만 자당 0.1"
+        "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 9건, 만 자당 0.1"
       }
     },
     {
@@ -538,7 +546,9 @@
       ],
       "enabled": true,
       "evidence": {
-        "kind": "none"
+        "kind": "measured",
+        "date": "2026-09-19",
+        "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 17건, 만 자당 0.2"
       }
     },
     {
@@ -587,10 +597,10 @@
     {
       "id": "beoryeoya-haneun-geot",
       "category": "coined",
-      "match": "forms",
+      "match": "fragment",
       "banned": [
         "버려야 하는 것",
-        "살아남는 것"
+        "살아남"
       ],
       "replace": [
         "버릴 것",
@@ -602,7 +612,9 @@
       ],
       "enabled": true,
       "evidence": {
-        "kind": "none"
+        "kind": "measured",
+        "date": "2026-09-19",
+        "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 14건, 만 자당 0.1"
       }
     },
     {

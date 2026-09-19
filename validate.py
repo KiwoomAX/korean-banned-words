@@ -38,6 +38,15 @@ def check(data):
     if not isinstance(updated, str) or not DATE_PATTERN.match(updated):
         fail("updated 가 YYYY-MM-DD 형식이 아닙니다: %r" % (updated,))
 
+    # 목록을 어떻게 쓰는지도 데이터가 갖는다. 생성물마다 따로 적으면 갈라진다.
+    notice = data.get("notice")
+    if not isinstance(notice, dict):
+        fail("notice 가 객체가 아닙니다")
+        notice = {}
+    for key in ("generated", "usage", "method", "artifact", "source"):
+        if not isinstance(notice.get(key), str) or not notice[key].strip():
+            fail("notice.%s 가 비어 있습니다" % key)
+
     scopes = data.get("scopes")
     if not isinstance(scopes, dict) or not scopes:
         fail("scopes 가 비어 있거나 객체가 아닙니다")

@@ -10,6 +10,7 @@
   python render.py --check    쓰지 않고 지금 dist/ 와 다른지만 본다
 """
 
+import hashlib
 import io
 import json
 import sys
@@ -35,6 +36,21 @@ def repl_of(e):
     return " · ".join(e.get("replace") or []) or e.get("instruction", "")
 
 
+def digest(data):
+    """데이터의 내용 지문. 같은 날 여러 번 바뀌는 것을 소비자가 알아채게 한다.
+
+    updated 는 날짜뿐이라 하루에 여러 번 고치면 값이 같다. 이 저장소는 실제로
+    2026-09-20 하루에 열두 번 바뀌었고 그 열두 판본의 updated 가 모두 같다.
+    그래서 날짜만으로는 두 사본이 같은 것인지 알 수 없다.
+
+    지문은 순서를 정하지 못한다. 다른지만 말한다. 소비자는 schema 와 날짜로
+    어느 쪽이 새것인지 가리고, 둘이 같은데 지문이 다르면 손대지 말고 알린다.
+    그때 어느 쪽이 새것인지는 기계가 알 수 없다.
+    """
+    body = json.dumps(data, ensure_ascii=False, sort_keys=True).encode("utf-8")
+    return hashlib.sha256(body).hexdigest()[:12]
+
+
 # hooks/_banned_words.sh 가 `### 금지 표현` 제목 아래에서 `| ` 로 시작하고
 # 백틱이 붙은 행만 읽는다. 첫 칸의 백틱 안을 검색어로, 둘째 칸을 대체어로 쓰고
 # 칸이 넷 이상인지만 본다. 그래서 칸을 뒤에 더해도 안전하다.
@@ -53,7 +69,8 @@ def render(data):
         "",
         "<!-- 원본: %s -->" % src,
         "<!-- 다시 만들기: 원본 저장소의 render.py -->",
-        "<!-- 원본 판: schema %s, %s -->" % (data["schema"], data["updated"]),
+        "<!-- 원본 판: schema %s, %s, %s -->"
+        % (data["schema"], data["updated"], digest(data)),
         "",
         "### 금지 표현",
         "",

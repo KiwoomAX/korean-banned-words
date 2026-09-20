@@ -4,7 +4,7 @@
 
 <!-- 원본: https://github.com/KiwoomAX/korean-banned-words -->
 <!-- 다시 만들기: 원본 저장소의 render.py -->
-<!-- 원본 판: schema 1, 2026-09-20 -->
+<!-- 원본 판: schema 1, 2026-09-20, f7d73a1157ce -->
 
 ### 금지 표현
 

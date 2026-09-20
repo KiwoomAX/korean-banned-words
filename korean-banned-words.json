@@ -831,6 +831,29 @@
         "date": "2026-09-20",
         "quote": "쪽 -> 페이지"
       }
+    },
+    {
+      "id": "pan",
+      "category": "insider",
+      "match": "fragment",
+      "banned": [
+        "판본",
+        "판 번호"
+      ],
+      "replace": [
+        "버전"
+      ],
+      "scope": [
+        "answer",
+        "artifact",
+        "living-doc"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "user",
+        "date": "2026-09-20",
+        "quote": "판 -> 버전으로 해줘"
+      }
     }
   ],
   "rules": [

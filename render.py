@@ -69,7 +69,7 @@ def render(data):
         "",
         "<!-- 원본: %s -->" % src,
         "<!-- 다시 만들기: 원본 저장소의 render.py -->",
-        "<!-- 원본 판: schema %s, %s, %s -->"
+        "<!-- 원본 버전: schema %s, %s, %s -->"
         % (data["schema"], data["updated"], digest(data)),
         "",
         "### 금지 표현",
@@ -112,7 +112,7 @@ def render(data):
 
 # 소비자가 기대는 두 가지다. 문서로만 두면 조용히 깨지므로 만들 때 확인한다.
 #
-#  하나. 판 표시가 머리 20줄 안에 있어야 한다. disciplined-coder 의 세션 시작
+#  하나. 버전 표시가 머리 20줄 안에 있어야 한다. disciplined-coder 의 세션 시작
 #        알림이 `head -20` 으로 그 줄만 읽어 어느 쪽 목록이 최신인지 가린다.
 #        자리가 밀리면 알림이 소리 없이 죽는다.
 #
@@ -120,7 +120,7 @@ def render(data):
 #      awk 가 `c[2]` 와 `c[3]` 만 읽는다. 칸을 뒤에 추가하는 것은 안전하지만
 #      앞의 둘을 옮기면 검색어가 통째로 어긋난다.
 
-VERSION_MARK = "<!-- 원본 판: schema "
+VERSION_MARK = "<!-- 원본 버전: schema "
 HEAD_LIMIT = 20
 TABLE_HEAD = "| 쓰지 않는 말 | 대신 쓰는 말 |"
 
@@ -129,7 +129,7 @@ def check_contract(lines):
     head = [i for i, l in enumerate(lines[:HEAD_LIMIT]) if l.startswith(VERSION_MARK)]
     if not head:
         raise SystemExit(
-            "판 표시가 머리 %d줄 안에 없습니다. 소비자가 `head -%d` 로 읽습니다."
+            "버전 표시가 머리 %d줄 안에 없습니다. 소비자가 `head -%d` 로 읽습니다."
             % (HEAD_LIMIT, HEAD_LIMIT))
     if not any(l.startswith(TABLE_HEAD) for l in lines):
         raise SystemExit(

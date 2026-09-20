@@ -17,7 +17,7 @@ from pathlib import Path
 
 DATA = Path(__file__).parent / "korean-banned-words.json"
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 EVIDENCE_KINDS = {"user", "measured", "reasoned", "none"}
 MATCH_MODES = {"forms", "fragment"}
 ID_PATTERN = re.compile(r"^[a-z0-9][a-z0-9-]*$")
@@ -167,6 +167,19 @@ def check(data):
             for w in replace:
                 if not isinstance(w, str) or not w.strip():
                     fail("%s.replace 에 빈 문자열이 있습니다" % where)
+
+        # 제외 목록. 어간이 다른 말의 일부일 때 그 말을 적어 검출에서 뺀다.
+        exc = e.get("exclude")
+        if exc is not None:
+            if not isinstance(exc, list) or not exc:
+                fail("%s.exclude 가 비어 있거나 목록이 아닙니다" % where)
+            else:
+                for w in exc:
+                    if not isinstance(w, str) or not w.strip():
+                        fail("%s.exclude 에 빈 문자열이 있습니다" % where)
+                    elif banned and not any(b in w for b in banned):
+                        fail("%s.exclude 의 '%s' 가 banned 의 어느 글자도 포함하지 "
+                             "않습니다. 제외는 어간을 품는 말이어야 합니다" % (where, w))
 
         scope = e.get("scope")
         if not isinstance(scope, list) or not scope:

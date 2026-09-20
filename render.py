@@ -78,19 +78,20 @@ def render(data):
         "",
         "%s %s" % (n["method"], n["artifact"]),
         "",
-        "첫째 칸의 백틱 안이 검색할 글자 그대로다. 셋째 칸이 적용 대상을 정한다. "
+        "첫째 칸의 백틱 안이 검색할 글자 그대로다. 셋째 칸이 적용 대상을 정한다. 다섯째 칸은 제외로, 첫 칸의 글자가 그 말의 일부이면 검출하지 않는다. "
         "`답변과 산출물`은 사용자에게 보내는 답과 사용자가 요구한 산출물 문서이고, "
         "`문서와 답변`은 거기에 저장소의 살아 있는 문서까지 더한 것이다. "
         "각 항목의 근거는 %s 에 있다." % src,
         "",
-        "| 쓰지 않는 말 | 대신 쓰는 말 | 적용 대상 | 분류 |",
-        "|---|---|---|---|",
+        "| 쓰지 않는 말 | 대신 쓰는 말 | 적용 대상 | 분류 | 제외 |",
+        "|---|---|---|---|---|",
     ]
     for e in live(data):
         words = " · ".join("`%s`" % w for w in e["banned"])
         where = "문서와 답변" if "living-doc" in e["scope"] else "답변과 산출물"
-        out.append("| %s | %s | %s | %s |"
-                   % (words, repl_of(e), where, title[e["category"]]))
+        exc = " · ".join("`%s`" % w for w in e.get("exclude") or []) or "—"
+        out.append("| %s | %s | %s | %s | %s |"
+                   % (words, repl_of(e), where, title[e["category"]], exc))
 
     rules = [r for r in data.get("rules", []) if r.get("enabled", True)]
     if rules:

@@ -6,14 +6,9 @@
 
 ## 파일
 
-`korean-banned-words.json` 이 목록이고, `render.py` 가 소비자가 싣는 마크다운을 만들며, `validate.py` 가 형식 검사입니다. 만들어진 파일은 `dist/` 에 있습니다.
+`korean-banned-words.json` 이 목록이고, `render.py` 가 소비자가 싣는 `dist/korean-banned-words.md` 를 만들며, `validate.py` 가 형식 검사입니다.
 
-| 파일 | 받는 곳 | 모양 |
-|---|---|---|
-| `dist/korean-banned-words-dc.md` | disciplined-coder | 훅이 파싱하는 표 |
-| `dist/korean-banned-words-ax.md` | 사내 kw-control-tower | 분류별 화살표 |
-
-모양이 둘이어도 생성기는 하나입니다. 생성기가 둘이면 분류 제목과 안내 문구와 항목 차례가 두 벌이 되고, 실제로 그렇게 불일치가 생긴 적이 있습니다. 소비자는 파이썬을 돌리지 않고 만들어진 `.md` 를 받아 자기 저장소에 커밋하기만 합니다.
+소비자 둘이 같은 파일을 씁니다. 받아서 자기 저장소에 커밋하고 `CLAUDE.md` 로 싣는 것까지 절차가 같기 때문입니다. 다른 것은 disciplined-coder 만 훅으로 파싱한다는 것인데, 파싱되는 표를 사람이 읽어도 불편하지 않습니다. 소비자는 파이썬을 실행하지 않습니다.
 
 ## 데이터
 
@@ -60,6 +55,5 @@ python render.py --check
 소비자 저장소는 GitHub Actions 로 하루 한 번 `dist/` 의 자기 파일을 받아 자기 저장소에 PR 을 엽니다. 이 저장소가 밀어 넣으면 접근 토큰을 보관해야 하므로 받아 가는 쪽으로 두었습니다.
 
 ```
-https://raw.githubusercontent.com/KiwoomAX/korean-banned-words/main/dist/korean-banned-words-dc.md
-https://raw.githubusercontent.com/KiwoomAX/korean-banned-words/main/dist/korean-banned-words-ax.md
+https://raw.githubusercontent.com/KiwoomAX/korean-banned-words/main/dist/korean-banned-words.md
 ```

@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "updated": "2026-09-20",
+  "updated": "2026-09-21",
   "source": "https://github.com/KiwoomAX/korean-banned-words",
   "notice": {
     "generated": "이 파일은 생성물이다. 고치려면 KiwoomAX/korean-banned-words 의 데이터를 고친다. 여기를 손으로 고치면 다음 갱신 때 사라진다.",
@@ -604,7 +604,10 @@
       "category": "english-literal",
       "match": "fragment",
       "banned": [
-        "붉어"
+        "붉어",
+        "빨개",
+        "빨갛",
+        "빨간"
       ],
       "replace": [
         "실패"
@@ -616,10 +619,14 @@
       ],
       "enabled": true,
       "evidence": {
-        "kind": "measured",
-        "date": "2026-09-19",
-        "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 26건, 만 자당 0.27"
-      }
+        "kind": "user",
+        "date": "2026-09-21",
+        "quote": "빨개지지 -> 실패하지 가 되야할듯"
+      },
+      "exclude": [
+        "빨간펜",
+        "빨간색 글씨"
+      ]
     },
     {
       "id": "heotdolda",
@@ -879,6 +886,31 @@
         "동판",
         "판사"
       ]
+    },
+    {
+      "id": "chorok",
+      "category": "english-literal",
+      "match": "fragment",
+      "banned": [
+        "초록",
+        "파란불",
+        "녹색"
+      ],
+      "replace": [
+        "통과",
+        "성공"
+      ],
+      "scope": [
+        "answer",
+        "artifact",
+        "living-doc"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-21",
+        "quote": "2026-09-21 세션 기록 46개의 Claude 발화 97만 7천 자 집계에서 초록 96건, 만 자당 0.98. 전부 검사 통과를 색으로 말한 것"
+      }
     }
   ],
   "rules": [

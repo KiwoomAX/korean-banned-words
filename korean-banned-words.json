@@ -50,7 +50,9 @@
         "재어",
         "잰",
         "쟀",
-        "잴"
+        "잴",
+        "재는",
+        "재지"
       ],
       "replace": [
         "측정",
@@ -68,7 +70,17 @@
         "kind": "user",
         "date": "2026-08-30",
         "quote": "몇가지만 수정하고 싶은데, 재다 -> 측정하다 오히려 더 편한 말이야. 자리 -> 각 작업에 더 맞게 내로우하게 해줘. 선다 -> 이것또한 적절히. 이런 어구를 너가 요즘 많이 써... 쉬운말로 쓰라해서 쉬운말로 쓴느데, 오히려 그 쉬운말이 어울리지 않아. 이건 심지어 구어체도 아니야."
-      }
+      },
+      "exclude": [
+        "현재는",
+        "존재는",
+        "부재는",
+        "실재는",
+        "소재는",
+        "잔재는",
+        "등재는",
+        "소재지"
+      ]
     },
     {
       "id": "jipda",
@@ -121,7 +133,8 @@
       "banned": [
         "맞대",
         "맞댄",
-        "맞댔"
+        "맞댔",
+        "맞댈"
       ],
       "replace": [
         "대조",
@@ -146,7 +159,8 @@
         "띄우",
         "띄운",
         "띄워",
-        "띄웠"
+        "띄웠",
+        "띄울"
       ],
       "replace": [
         "실행",
@@ -173,7 +187,8 @@
         "갈라",
         "갈랐",
         "갈린",
-        "갈렸"
+        "갈렸",
+        "갈리"
       ],
       "replace": [
         "구분",
@@ -202,7 +217,8 @@
         "세우",
         "세운",
         "세워",
-        "세웠"
+        "세웠",
+        "세울"
       ],
       "replace": [
         "설정",
@@ -218,7 +234,10 @@
         "kind": "measured",
         "date": "2026-09-19",
         "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 129건, 만 자당 1.32"
-      }
+      },
+      "exclude": [
+        "앞세울"
+      ]
     },
     {
       "id": "damda",
@@ -374,7 +393,9 @@
         "부른",
         "불러",
         "부릅",
-        "부를"
+        "부를",
+        "불렀",
+        "불린"
       ],
       "replace": [
         "호출",
@@ -465,7 +486,12 @@
         "kind": "measured",
         "date": "2026-09-19",
         "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 174건, 만 자당 1.78"
-      }
+      },
+      "exclude": [
+        "대부분",
+        "앞부분",
+        "부분적"
+      ]
     },
     {
       "id": "gyeongu",
@@ -607,7 +633,10 @@
         "붉어",
         "빨개",
         "빨갛",
-        "빨간"
+        "빨간",
+        "붉게",
+        "붉은",
+        "붉히"
       ],
       "replace": [
         "실패"
@@ -911,6 +940,255 @@
         "date": "2026-09-21",
         "quote": "2026-09-21 세션 기록 46개의 Claude 발화 97만 7천 자 집계에서 초록 96건, 만 자당 0.98. 전부 검사 통과를 색으로 말한 것"
       }
+    },
+    {
+      "id": "makda",
+      "category": "native-verb",
+      "match": "fragment",
+      "banned": [
+        "막는",
+        "막지",
+        "막으",
+        "막을",
+        "막아",
+        "막고",
+        "막은",
+        "막았",
+        "막기"
+      ],
+      "replace": [
+        "금지",
+        "중단",
+        "차단"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "exclude": [
+        "마지막으",
+        "마지막은"
+      ],
+      "evidence": {
+        "kind": "user",
+        "date": "2026-09-21",
+        "quote": "그리고 막는 것 -> 금지 / 막는 것 -> 중단 사항 또는 금지 사항"
+      }
+    },
+    {
+      "id": "munteok",
+      "category": "english-literal",
+      "match": "forms",
+      "banned": [
+        "문턱"
+      ],
+      "replace": [
+        "임계값",
+        "기준"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-21",
+        "quote": "2026-09-21 한국어 문서 263개 122만 자 집계(플러그인 캐시의 중복 사본 제거, 코드블록과 백틱 안 제외)에서 82건. threshold 를 직역한 것"
+      }
+    },
+    {
+      "id": "jjogae",
+      "category": "native-verb",
+      "match": "fragment",
+      "banned": [
+        "쪼개"
+      ],
+      "replace": [
+        "분할"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-21",
+        "quote": "2026-09-21 한국어 문서 263개 122만 자 집계(플러그인 캐시의 중복 사본 제거, 코드블록과 백틱 안 제외)에서 116건"
+      }
+    },
+    {
+      "id": "geonneottwi",
+      "category": "native-verb",
+      "match": "fragment",
+      "banned": [
+        "건너뛰"
+      ],
+      "replace": [
+        "생략"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-21",
+        "quote": "2026-09-21 한국어 문서 263개 122만 자 집계(플러그인 캐시의 중복 사본 제거, 코드블록과 백틱 안 제외)에서 55건"
+      }
+    },
+    {
+      "id": "gyeonju",
+      "category": "native-verb",
+      "match": "fragment",
+      "banned": [
+        "견주"
+      ],
+      "replace": [
+        "비교"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-21",
+        "quote": "2026-09-21 한국어 문서 263개 122만 자 집계(플러그인 캐시의 중복 사본 제거, 코드블록과 백틱 안 제외)에서 22건"
+      }
+    },
+    {
+      "id": "kkaekkeut",
+      "category": "english-literal",
+      "match": "fragment",
+      "banned": [
+        "깨끗"
+      ],
+      "replace": [
+        "정리됨",
+        "비어 있음"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-21",
+        "quote": "2026-09-21 한국어 문서 263개 122만 자 집계(플러그인 캐시의 중복 사본 제거, 코드블록과 백틱 안 제외)에서 13건. clean 을 직역한 것"
+      }
+    },
+    {
+      "id": "jungneunda",
+      "category": "english-literal",
+      "match": "forms",
+      "banned": [
+        "죽는다"
+      ],
+      "replace": [
+        "종료",
+        "중단"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-21",
+        "quote": "2026-09-21 한국어 문서 263개 122만 자 집계(플러그인 캐시의 중복 사본 제거, 코드블록과 백틱 안 제외)에서 13건. dies 를 직역한 것"
+      }
+    },
+    {
+      "id": "susa-pronoun",
+      "category": "too-broad",
+      "match": "forms",
+      "banned": [
+        "그 둘",
+        "그 셋",
+        "그 넷",
+        "그 다섯",
+        "그 여섯",
+        "아래 둘",
+        "아래 셋",
+        "아래 넷",
+        "것 둘",
+        "것 셋",
+        "것 넷"
+      ],
+      "instruction": "수사 앞에 가리키는 대상의 이름을 적는다",
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "exclude": [
+        "로그 둘",
+        "로그 셋"
+      ],
+      "evidence": {
+        "kind": "user",
+        "date": "2026-09-21",
+        "quote": "이 셋을 대명사처럼 씀. 근데 이건 완전히 틀린 표현임"
+      }
+    },
+    {
+      "id": "gaunde",
+      "category": "native-verb",
+      "match": "forms",
+      "banned": [
+        "가운데"
+      ],
+      "replace": [
+        "중",
+        "중간"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "exclude": [
+        "한가운데"
+      ],
+      "evidence": {
+        "kind": "user",
+        "date": "2026-09-20",
+        "quote": "이미 하신 일 가운데 자료에 안 적혀 있는 것입니다 -> 이미 한 일을 자료에 작성하지 않았기 때문입니다"
+      }
+    },
+    {
+      "id": "geosida",
+      "category": "too-broad",
+      "match": "fragment",
+      "banned": [
+        "것이다",
+        "것입니다",
+        "것이었"
+      ],
+      "instruction": "서술어로 문장을 끝낸다",
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "exclude": [
+        "그것이다",
+        "이것이다",
+        "그것입니다",
+        "이것입니다"
+      ],
+      "evidence": {
+        "kind": "user",
+        "date": "2026-09-20",
+        "quote": "이미 하신 일 가운데 자료에 안 적혀 있는 것입니다 -> 이미 한 일을 자료에 작성하지 않았기 때문입니다"
+      }
     }
   ],
   "rules": [
@@ -981,6 +1259,34 @@
         "kind": "user",
         "date": "2026-09-20",
         "quote": "이틀에 할 일 => 이틀내 할 일"
+      }
+    },
+    {
+      "id": "heading-no-count",
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "text": "제목과 소제목에 개수를 붙이지 않는다. '금지사항 넷' 이 아니라 '금지사항' 이다. 개수가 필요하면 본문 문장에 적는다.",
+      "evidence": {
+        "kind": "user",
+        "date": "2026-09-21",
+        "quote": "서브타이틀에는 ~~ 숫자 를 쓰지마라. 가령 막는 것 넷"
+      }
+    },
+    {
+      "id": "numeral-not-pronoun",
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "text": "수사를 대명사처럼 쓰지 않는다. '이 셋이 돈다' 가 아니라 '이 검사 세 가지가 실행된다' 이다.",
+      "evidence": {
+        "kind": "user",
+        "date": "2026-09-21",
+        "quote": "이 셋을 대명사처럼 씀. 근데 이건 완전히 틀린 표현임"
       }
     }
   ]

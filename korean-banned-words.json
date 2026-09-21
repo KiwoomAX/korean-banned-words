@@ -963,7 +963,8 @@
       ],
       "scope": [
         "answer",
-        "artifact"
+        "artifact",
+        "living-doc"
       ],
       "enabled": true,
       "exclude": [
@@ -1125,7 +1126,8 @@
       "instruction": "수사 앞에 가리키는 대상의 이름을 적는다",
       "scope": [
         "answer",
-        "artifact"
+        "artifact",
+        "living-doc"
       ],
       "enabled": true,
       "exclude": [
@@ -1151,7 +1153,8 @@
       ],
       "scope": [
         "answer",
-        "artifact"
+        "artifact",
+        "living-doc"
       ],
       "enabled": true,
       "exclude": [
@@ -1175,7 +1178,8 @@
       "instruction": "서술어로 문장을 끝낸다",
       "scope": [
         "answer",
-        "artifact"
+        "artifact",
+        "living-doc"
       ],
       "enabled": true,
       "exclude": [

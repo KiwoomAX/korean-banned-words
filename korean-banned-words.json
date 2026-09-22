@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "updated": "2026-09-22",
+  "updated": "2026-09-23",
   "source": "https://github.com/KiwoomAX/korean-banned-words",
   "notice": {
     "generated": "이 파일은 생성물이다. 고치려면 KiwoomAX/korean-banned-words 의 데이터를 고친다. 여기를 손으로 고치면 다음 갱신 때 사라진다.",
@@ -38,6 +38,10 @@
     {
       "id": "insider",
       "title": "평소에 쓰지 않는 말"
+    },
+    {
+      "id": "spoken",
+      "title": "구어에서만 쓰는 말"
     }
   ],
   "entries": [
@@ -1195,6 +1199,276 @@
         "kind": "user",
         "date": "2026-09-20",
         "quote": "이미 하신 일 가운데 자료에 안 적혀 있는 것입니다 -> 이미 한 일을 자료에 작성하지 않았기 때문입니다"
+      }
+    },
+    {
+      "id": "dolrida",
+      "category": "spoken",
+      "match": "fragment",
+      "banned": [
+        "돌리"
+      ],
+      "replace": [
+        "실행",
+        "호출"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "exclude": [
+        "되돌리"
+      ],
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-23",
+        "quote": "2026-09-23 한국어 문서 263개 122만 자와 Claude 답변 4,569개 257만 자 집계(중복 사본과 코드블록과 백틱 안 제외)에서 600건. 2026-08-30 문서 감사가 지적한 구어 동사 굴리다 와 같은 분류다"
+      }
+    },
+    {
+      "id": "gochim",
+      "category": "native-verb",
+      "match": "fragment",
+      "banned": [
+        "고침"
+      ],
+      "replace": [
+        "수정"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "exclude": [
+        "새로고침"
+      ],
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-23",
+        "quote": "2026-09-23 한국어 문서 263개 122만 자와 Claude 답변 4,569개 257만 자 집계에서 123건"
+      }
+    },
+    {
+      "id": "geunyang",
+      "category": "spoken",
+      "match": "forms",
+      "banned": [
+        "그냥"
+      ],
+      "replace": [
+        "별도 조치 없이",
+        "그대로"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-23",
+        "quote": "2026-09-23 한국어 문서 263개 122만 자와 Claude 답변 4,569개 257만 자 집계에서 108건"
+      }
+    },
+    {
+      "id": "pyeoni",
+      "category": "spoken",
+      "match": "forms",
+      "banned": [
+        "는 편이",
+        "는 편입"
+      ],
+      "instruction": "에두르지 않고 단정한다",
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-23",
+        "quote": "2026-09-23 한국어 문서 263개 122만 자와 Claude 답변 4,569개 257만 자 집계에서 97건"
+      }
+    },
+    {
+      "id": "geodeonae",
+      "category": "spoken",
+      "match": "fragment",
+      "banned": [
+        "걷어내"
+      ],
+      "replace": [
+        "제거",
+        "삭제"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-23",
+        "quote": "2026-09-23 한국어 문서 263개 122만 자와 Claude 답변 4,569개 257만 자 집계에서 89건"
+      }
+    },
+    {
+      "id": "jjeum",
+      "category": "spoken",
+      "match": "fragment",
+      "banned": [
+        "쯤"
+      ],
+      "replace": [
+        "정도",
+        "가량"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-23",
+        "quote": "2026-09-23 한국어 문서 263개 122만 자와 Claude 답변 4,569개 257만 자 집계에서 76건"
+      }
+    },
+    {
+      "id": "ge-anira",
+      "category": "spoken",
+      "match": "forms",
+      "banned": [
+        "게 아니라"
+      ],
+      "replace": [
+        "것이 아니라"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-23",
+        "quote": "2026-09-23 집계에서 46건. 같은 뜻의 것이 아니라 가 106건이라 한 문서에서 두 형태를 섞어 쓰고 있었다"
+      }
+    },
+    {
+      "id": "geuge",
+      "category": "spoken",
+      "match": "forms",
+      "banned": [
+        "그게"
+      ],
+      "replace": [
+        "그것"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-23",
+        "quote": "2026-09-23 집계에서 42건. 이게 는 보이게·쓰이게 처럼 사동과 피동 어간에 붙는 형태와 구별되지 않아 넣지 않았다"
+      }
+    },
+    {
+      "id": "malimnida",
+      "category": "spoken",
+      "match": "forms",
+      "banned": [
+        "말입니다",
+        "말이다"
+      ],
+      "replace": [
+        "뜻",
+        "의미"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "exclude": [
+        "낱말이다",
+        "낱말입니다"
+      ],
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-23",
+        "quote": "2026-09-23 집계에서 39건"
+      }
+    },
+    {
+      "id": "nikkayo",
+      "category": "spoken",
+      "match": "fragment",
+      "banned": [
+        "니까요"
+      ],
+      "replace": [
+        "때문입니다"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-23",
+        "quote": "2026-09-23 집계에서 35건. 전부 Claude 답변에서 나왔고 문서에는 0건이다"
+      }
+    },
+    {
+      "id": "geot-gat",
+      "category": "spoken",
+      "match": "fragment",
+      "banned": [
+        "것 같"
+      ],
+      "instruction": "근거를 대어 단정한다",
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-23",
+        "quote": "2026-09-23 집계에서 34건. 추측으로 말끝을 흐리는 형태다"
+      }
+    },
+    {
+      "id": "mwo",
+      "category": "spoken",
+      "match": "forms",
+      "banned": [
+        "뭐가",
+        "뭘"
+      ],
+      "replace": [
+        "무엇이",
+        "무엇을"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": true,
+      "exclude": [
+        "뭘걸"
+      ],
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-23",
+        "quote": "2026-09-23 집계에서 32건"
       }
     }
   ],

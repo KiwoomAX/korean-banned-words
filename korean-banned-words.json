@@ -625,12 +625,13 @@
         "answer",
         "artifact"
       ],
-      "enabled": true,
+      "enabled": false,
       "evidence": {
         "kind": "measured",
         "date": "2026-09-19",
         "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 33건, 만 자당 0.34"
-      }
+      },
+      "disabled_reason": "2026-09-23 기준선 적용. 적용 대상 말뭉치에서 32건, 만자당 0.12 로 기준선 0.15 미만이라 껐다. 빈도가 오르면 다시 켠다."
     },
     {
       "id": "bulgeojida",
@@ -681,12 +682,13 @@
         "artifact",
         "living-doc"
       ],
-      "enabled": true,
+      "enabled": false,
       "evidence": {
         "kind": "measured",
         "date": "2026-09-19",
         "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 9건, 만 자당 0.09"
-      }
+      },
+      "disabled_reason": "2026-09-23 기준선 적용. 적용 대상 말뭉치에서 20건, 만자당 0.05 로 기준선 0.15 미만이라 껐다. 빈도가 오르면 다시 켠다."
     },
     {
       "id": "gakdo",
@@ -725,12 +727,13 @@
         "answer",
         "artifact"
       ],
-      "enabled": true,
+      "enabled": false,
       "evidence": {
         "kind": "measured",
         "date": "2026-09-19",
         "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 3건, 만 자당 0.03"
-      }
+      },
+      "disabled_reason": "2026-09-23 기준선 적용. 적용 대상 말뭉치에서 6건, 만자당 0.02 로 기준선 0.15 미만이라 껐다. 빈도가 오르면 다시 켠다."
     },
     {
       "id": "gatda",
@@ -1106,12 +1109,13 @@
         "answer",
         "artifact"
       ],
-      "enabled": true,
+      "enabled": false,
       "evidence": {
         "kind": "measured",
         "date": "2026-09-21",
         "quote": "2026-09-21 한국어 문서 263개 122만 자 집계(플러그인 캐시의 중복 사본 제거, 코드블록과 백틱 안 제외)에서 13건. dies 를 직역한 것"
-      }
+      },
+      "disabled_reason": "2026-09-23 기준선 적용. 적용 대상 말뭉치에서 8건, 만자당 0.03 로 기준선 0.15 미만이라 껐다. 빈도가 오르면 다시 켠다."
     },
     {
       "id": "susa-pronoun",
@@ -1371,12 +1375,13 @@
         "answer",
         "artifact"
       ],
-      "enabled": true,
+      "enabled": false,
       "evidence": {
         "kind": "measured",
         "date": "2026-09-23",
         "quote": "2026-09-23 집계에서 42건. 이게 는 보이게·쓰이게 처럼 사동과 피동 어간에 붙는 형태와 구별되지 않아 넣지 않았다"
-      }
+      },
+      "disabled_reason": "2026-09-23 기준선 적용. 적용 대상 말뭉치에서 38건, 만자당 0.15 로 기준선 0.15 미만이라 껐다. 빈도가 오르면 다시 켠다."
     },
     {
       "id": "malimnida",
@@ -1394,7 +1399,7 @@
         "answer",
         "artifact"
       ],
-      "enabled": true,
+      "enabled": false,
       "exclude": [
         "낱말이다",
         "낱말입니다"
@@ -1403,7 +1408,8 @@
         "kind": "measured",
         "date": "2026-09-23",
         "quote": "2026-09-23 집계에서 39건"
-      }
+      },
+      "disabled_reason": "2026-09-23 기준선 적용. 적용 대상 말뭉치에서 26건, 만자당 0.10 로 기준선 0.15 미만이라 껐다. 빈도가 오르면 다시 켠다."
     },
     {
       "id": "nikkayo",
@@ -1419,12 +1425,13 @@
         "answer",
         "artifact"
       ],
-      "enabled": true,
+      "enabled": false,
       "evidence": {
         "kind": "measured",
         "date": "2026-09-23",
         "quote": "2026-09-23 집계에서 35건. 전부 Claude 답변에서 나왔고 문서에는 0건이다"
-      }
+      },
+      "disabled_reason": "2026-09-23 기준선 적용. 적용 대상 말뭉치에서 35건, 만자당 0.14 로 기준선 0.15 미만이라 껐다. 빈도가 오르면 다시 켠다."
     },
     {
       "id": "geot-gat",
@@ -1438,12 +1445,13 @@
         "answer",
         "artifact"
       ],
-      "enabled": true,
+      "enabled": false,
       "evidence": {
         "kind": "measured",
         "date": "2026-09-23",
         "quote": "2026-09-23 집계에서 34건. 추측으로 말끝을 흐리는 형태다"
-      }
+      },
+      "disabled_reason": "2026-09-23 기준선 적용. 적용 대상 말뭉치에서 28건, 만자당 0.11 로 기준선 0.15 미만이라 껐다. 빈도가 오르면 다시 켠다."
     },
     {
       "id": "mwo",
@@ -1461,7 +1469,7 @@
         "answer",
         "artifact"
       ],
-      "enabled": true,
+      "enabled": false,
       "exclude": [
         "뭘걸"
       ],
@@ -1469,6 +1477,52 @@
         "kind": "measured",
         "date": "2026-09-23",
         "quote": "2026-09-23 집계에서 32건"
+      },
+      "disabled_reason": "2026-09-23 기준선 적용. 적용 대상 말뭉치에서 21건, 만자당 0.08 로 기준선 0.15 미만이라 껐다. 빈도가 오르면 다시 켠다."
+    },
+    {
+      "id": "gap-value",
+      "category": "english-literal",
+      "match": "forms",
+      "banned": [
+        "값"
+      ],
+      "replace": [
+        "가치",
+        "우선순위"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": false,
+      "disabled_reason": "2026-09-23 기각. 가치를 뜻하는 잘못된 용법만 골라낼 문자열이 없다. 379만 자에서 2,453건이 검출되는데 수치를 뜻하는 정상 용법이 거의 전부다.",
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-23",
+        "quote": "2026-09-23 집계에서 값 2,453건. 값이·값을·기본값이 가 대다수다"
+      }
+    },
+    {
+      "id": "ige",
+      "category": "spoken",
+      "match": "forms",
+      "banned": [
+        "이게"
+      ],
+      "replace": [
+        "이것"
+      ],
+      "scope": [
+        "answer",
+        "artifact"
+      ],
+      "enabled": false,
+      "disabled_reason": "2026-09-23 기각. 보이게·쓰이게 처럼 사동과 피동 어간에 붙는 형태와 구별되지 않는다. 제외어로 막으려면 어간마다 적어야 해서 끝이 없다.",
+      "evidence": {
+        "kind": "measured",
+        "date": "2026-09-23",
+        "quote": "2026-09-23 집계에서 이게 88건, 그중 보이게 계열이 21건 이상"
       }
     }
   ],

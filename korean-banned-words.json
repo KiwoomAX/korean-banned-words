@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "updated": "2026-09-21",
+  "updated": "2026-09-22",
   "source": "https://github.com/KiwoomAX/korean-banned-words",
   "notice": {
     "generated": "이 파일은 생성물이다. 고치려면 KiwoomAX/korean-banned-words 의 데이터를 고친다. 여기를 손으로 고치면 다음 갱신 때 사라진다.",
@@ -579,7 +579,10 @@
         "kind": "measured",
         "date": "2026-09-19",
         "quote": "2026-09-19 세션 기록 46개의 Claude 발화 97만 7천 자 집계 (코드블록과 백틱 안 제외)에서 102건, 만 자당 1.04"
-      }
+      },
+      "exclude": [
+        "글꼴"
+      ]
     },
     {
       "id": "gallae",
